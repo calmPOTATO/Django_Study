@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메인화면</title>
+</head>
+<body>
+
+{%if review_list %}
+    <ul>
+    {% for review in review_list %}
+        <li>
+            <div>
+                <p>{{review.content}}</p>
+                <p>{{review.author}}</p>
+                <p>{{review.date}}</p>
+            </div>
+        </li>
+    </ul>
+    {% endfor %}
+
+{% else %}
+    <p>댓글 없음</p>
+{% endif %}
+    <a href="{% url 'insertReview' %}">
+        <button>댓글달기</button>
+    </a>
+
+
+</body>
+</html>

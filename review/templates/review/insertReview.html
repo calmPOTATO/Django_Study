@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>댓글쓰기</title>
+</head>
+<body>
+    <form action="/insertReview/complete/" method="post">
+        {% csrf_token %}
+        <input type="text" name="content" placeholder="500자"/>
+        <br>
+        <input type="text" name="author" placeholder="글쓴이"/>
+        <br>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
